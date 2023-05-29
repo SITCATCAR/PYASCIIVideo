@@ -60,10 +60,10 @@ segmentSize = frameCount // numSegments
 
 threads = []
 for segment in range(numSegments):
-    start_frame = segment * segmentSize
-    end_frame = start_frame + segmentSize if segment < numSegments - 1 else frameCount
+    startFrame = segment * segmentSize
+    endFrame = startFrame + segmentSize if segment < numSegments - 1 else frameCount
 
-    processFrames(start_frame, end_frame)
+    processFrames(startFrame, endFrame)
 
 cap.release()
 out.release()
